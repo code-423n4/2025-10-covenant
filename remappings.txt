@@ -1,0 +1,17 @@
+@std=lib/forge-std/src/
+@clones=lib/clones-with-immutable-args/src/
+@chainlink/=lib/chainlink-brownie-contracts/
+@openzeppelin/=lib/openzeppelin-contracts/contracts
+@solady=lib/solady/src/
+@aave/=lib/aave-v3-core/contracts/protocol/
+@euler-price-oracle/=lib/euler-price-oracle/src/
+aave-v3-core/=lib/aave-v3-core/
+forge-std/=lib/forge-std/src/
+@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/
+chainlink-brownie-contracts/=lib/chainlink-brownie-contracts/contracts/src/v0.6/vendor/@arbitrum/nitro-contracts/src/
+clones-with-immutable-args/=lib/clones-with-immutable-args/src/
+ds-test/=lib/clones-with-immutable-args/lib/ds-test/src/
+erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/
+halmos-cheatcodes/=lib/openzeppelin-contracts/lib/halmos-cheatcodes/src/
+openzeppelin-contracts/=lib/openzeppelin-contracts/
+solady/=lib/solady/src/

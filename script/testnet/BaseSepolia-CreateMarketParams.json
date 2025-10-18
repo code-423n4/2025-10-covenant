@@ -1,0 +1,13 @@
+{
+  "covenantLiquid": "0xf349956E1fE7984c7D636a71Dd2Bc559F5a63377",
+  "baseToken": "0x54eeAEd9C2d24d3A2bfD5f4848C7B4dBE772A868",
+  "quoteToken": "0xD2eEA5fA9D662f11a5442B554A478BFBD127A062",
+  "oracle": "0x1689617982554A8CDF7a91AC5597ec2EC3713c93",
+  "targetLTV": 5000,
+  "maxLTV": 9000,
+  "minLTV": 1000,
+  "debtDuration": 7776000,
+  "marketAmplification": 20000,
+  "initPriceDiscount": 990000000000000000000000000,
+  "dexPriceDiscountFocusHalfLife": 86400
+}

@@ -1,0 +1,15 @@
+{
+  "fallbackOracle": "0x0000000000000000000000000000000000000000",
+  "oraclePairs": [
+    {
+      "base": "0x52d82760c3345D85b1CA9995ec4F0493AA70a62a",
+      "quote": "0xDAa6DC35A941de5690d281AaF2d1fbE7aA3a3760",
+      "oracle": "0x59605880062e64FAB3Cdd666b7B549567f508312"
+    },
+    {
+      "base": "0x54eeAEd9C2d24d3A2bfD5f4848C7B4dBE772A868",
+      "quote": "0xD2eEA5fA9D662f11a5442B554A478BFBD127A062",
+      "oracle": "0x1689617982554A8CDF7a91AC5597ec2EC3713c93"
+    }
+  ]
+}

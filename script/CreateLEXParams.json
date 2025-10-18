@@ -1,0 +1,10 @@
+{
+  "covenantLiquid": "0xd12d77F1B7030960439E27538C788F51D6BE97d0",
+  "targetLTV": 9000,
+  "highLTV": 9800,
+  "maxLTV": 9990,
+  "yieldWidth": 1100000000000000000,
+  "rateBias": 5012540000000000,
+  "debtDuration": 2629800,
+  "swapFee": 0
+}

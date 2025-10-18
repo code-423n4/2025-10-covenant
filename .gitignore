@@ -1,0 +1,19 @@
+# Compiler files
+cache/
+out/
+
+# Dotenv file
+.env
+.vscode
+
+# System Files
+.DS_Store
+node_modules/
+
+# Coverage directory
+coverage/
+*.info
+.VSCodeCounter/
+
+# Broadcast directory
+broadcast/

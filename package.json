@@ -1,0 +1,25 @@
+{
+    "name": "covenant-liquid-v1",
+    "version": "1.0.0",
+    "description": "Covenant liquid core protocol",
+    "author": "Covenant Labs",
+    "license": "BUSL-1.1",
+    "scripts": {
+        "build": "forge build",
+        "clean": "rm -rf out/ cache/",
+        "compile": "forge compile",
+        "test": "forge test",
+        "coverage": "forge coverage",
+        "lint": "npm run lint:ts && npm run lint:sol",
+        "lint:fix": "npm run lint:ts:fix && npm run lint:sol:fix",
+        "lint:ts": "eslint '*/**/*.{js,ts}'",
+        "lint:ts:fix": "eslint '*/**/*.{js,ts}' --fix",
+        "lint:sol": "solium --dir ./contracts",
+        "lint:sol:fix": "solium --dir ./contracts --fix",
+        "prettier": "npm run prettier:sol",
+        "prettier:sol": "prettier --write 'src/**/*.sol' && prettier --write 'test/**/*.sol' & prettier --write 'script/**/*.sol'"
+    },
+    "dependencies": {
+        "prettier": "^3.4.2"
+    }
+}

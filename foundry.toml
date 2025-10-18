@@ -1,0 +1,38 @@
+[profile.default]
+src = 'src'
+out = 'out'
+libs = ['lib']
+gas_reports = ["*"]
+
+evm_version = 'cancun'
+optimizer = true
+optimizer_runs = 3750
+fs_permissions = [{ access = "read", path = "./script/"}]
+
+## Sets the concrete solc version to use, this overrides the `auto_detect_solc` value
+solc = '0.8.30'
+auto_detect_solc = false
+
+[fuzz]
+runs = 10000
+max_test_rejects = 60000
+max_test_case_size = 512 # Optional, adjust input size if needed
+fuzz_max_shrink_time = 0 # Unlimited shrinking time
+failure_persistence = true
+
+[profile.forkfuzz.fuzz]
+runs = 1000
+max_test_rejects = 60000
+
+[profile.coverage.fuzz]
+runs = 100
+max_test_rejects = 60000
+
+[profile.intense.fuzz]
+verbosity = 3
+runs = 100000
+max_test_rejects = 600000
+
+# Remappings in remappings.txt
+
+# See more config options https://github.com/gakonst/foundry/tree/master/config

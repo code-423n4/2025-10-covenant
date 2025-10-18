@@ -1,0 +1,9 @@
+{
+  "oracleType": "Chainlink",
+  "name": "USDC/USD", 
+  "baseToken": "0xf817257fed379853cDe0fa4F97AB987181B1E5Ea",
+  "quoteToken": "0x0000000000000000000000000000000000000348",
+  "feedAddress": "0x70BB0758a38ae43418ffcEd9A25273dd4e804D15",
+  "maxStaleness": 3600
+}
+
