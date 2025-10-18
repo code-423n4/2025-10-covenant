@@ -1,14 +1,13 @@
 # Covenant audit details
-- Total Prize Pool: XXX XXX USDC (Airtable: Total award pool)
-    - HM awards: up to XXX XXX USDC (Airtable: HM (main) pool)
-        - If no valid Highs or Mediums are found, the HM pool is $0 (🐺 C4 EM: adjust in case of tiered pools)
-    - QA awards: XXX XXX USDC (Airtable: QA pool)
-    - Judge awards: XXX XXX USDC (Airtable: Judge Fee)
-    - Scout awards: $500 USDC (Airtable: Scout fee - but usually $500 USDC)
-    - (this line can be removed if there is no mitigation) Mitigation Review: XXX XXX USDC
+- Total Prize Pool: $43,000 in USDC
+    - HM awards: up to $38,400 in USDC
+        - If no valid Highs or Mediums are found, the HM pool is $0
+    - QA awards: $1,600 in USDC
+    - Judge awards: $2,500 in USDC
+    - Scout awards: $500 in USDC
 - [Read our guidelines for more details](https://docs.code4rena.com/competitions)
-- Starts XXX XXX XX 20:00 UTC (ex. `Starts March 22, 2023 20:00 UTC`)
-- Ends XXX XXX XX 20:00 UTC (ex. `Ends March 30, 2023 20:00 UTC`)
+- Starts October 22, 2025 20:00 UTC
+- Ends November 3, 2025 20:00 UTC
 
 ### ❗ Important notes for wardens
 (🐺 C4 staff: delete the PoC requirement section if not applicable - i.e. for non-Solidity/EVM audits.)
