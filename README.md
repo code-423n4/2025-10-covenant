@@ -10,7 +10,6 @@
 - Ends November 3, 2025 20:00 UTC
 
 ### ❗ Important notes for wardens
-(🐺 C4 staff: delete the PoC requirement section if not applicable - i.e. for non-Solidity/EVM audits.)
 1. A coded, runnable PoC is required for all High/Medium submissions to this audit. 
     - This repo includes a basic template to run the test suite.
     - PoCs must use the test suite provided in this repo.
