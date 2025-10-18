@@ -30,11 +30,21 @@ V12 findings will be posted in this section within the first two days of the com
 
 _Anything included in this section is considered a publicly known issue and is therefore ineligible for awards._
 
-## 🐺 C4: Begin Gist paste here (and delete this line)
+- The system behaves like a DEX (where collateral, leverage and yield tokens can be swapped for each other).  We care that there are no arbitrage opportunities (more value taken out than going in) under a circular set of trades upto a 10^20 precision. However, we are ok if `value_out` is bigger than `value_in` for smaller amounts (e.g, if 10^21 of a token goes in, then 10^21 + 1 can come out).  
+- Admin risks (if admin is taken over, or if admin misconfigures oracles / latentswap limits, etc) is out of scope.  
 
+# Overview
 
+[TBD]
 
+## Links
 
+- **Previous audits:**  https://github.com/pashov/audits/blob/master/team/pdf/Covenant-security-review_2025-08-18.pdf
+- **Documentation:** https://docs.covenant.finance
+- **Website:** https://covenant.finance/
+- **X/Twitter:** https://x.com/covenantFi
+
+---
 
 # Scope
 
@@ -132,3 +142,51 @@ _Anything included in this section is considered a publicly known issue and is t
 | ./test/utils/TestUtils.sol |
 | Totals: 51 |
 
+# Additional context
+
+## Areas of concern (where to focus for bugs)
+TBC
+
+## Main invariants
+
+TBC
+
+## All trusted roles in the protocol
+
+TBC
+
+✅ SCOUTS: Please format the response above 👆 using the template below👇
+
+| Role                                | Description                       |
+| --------------------------------------- | ---------------------------- |
+| Owner                          | Has superpowers                |
+| Administrator                             | Can change fees                       |
+
+✅ SCOUTS: Please format the response above 👆 so its not a wall of text and its readable.
+
+## Running tests
+
+TBC
+
+✅ SCOUTS: Please format the response above 👆 using the template below👇
+
+```bash
+git clone https://github.com/code-423n4/2023-08-arbitrum
+git submodule update --init --recursive
+cd governance
+foundryup
+make install
+make build
+make sc-election-test
+```
+To run code coverage
+```bash
+make coverage
+```
+
+✅ SCOUTS: Add a screenshot of your terminal showing the test coverage
+
+## Miscellaneous
+Employees of Covenant Finance or Solana Development Foundation and employees' family members are ineligible to participate in this audit.
+
+Code4rena's rules cannot be overridden by the contents of this README. In case of doubt, please check with C4 staff.
