@@ -111,7 +111,7 @@ Covenant enables markets for the use and funding of leverage against any collate
 | [src/libraries/Errors.sol](https://github.com/code-423n4/2025-10-covenant/tree/main/src/libraries/Errors.sol) | 19 |
 | [src/libraries/Events.sol](https://github.com/code-423n4/2025-10-covenant/tree/main/src/libraries/Events.sol) | 50 |
 | [src/libraries/MarketParams.sol](https://github.com/code-423n4/2025-10-covenant/tree/main/src/libraries/MarketParams.sol) | 10 |
-| [src/libraries/MultiCall.sol](https://github.com/code-423n4/2025-10-covenant/tree/main/src/libraries/Multicall.sol) | 8 |
+| [src/libraries/MultiCall.sol](https://github.com/code-423n4/2025-10-covenant/tree/main/src/libraries/MultiCall.sol) | 8 |
 | [src/libraries/NoDelegateCall.sol](https://github.com/code-423n4/2025-10-covenant/tree/main/src/libraries/NoDelegateCall.sol) | 12 |
 | [src/libraries/SafeMetadata.sol](https://github.com/code-423n4/2025-10-covenant/tree/main/src/libraries/SafeMetadata.sol) | 47 |
 | [src/libraries/Utils.sol](https://github.com/code-423n4/2025-10-covenant/tree/main/src/libraries/Utils.sol) | 10 |
