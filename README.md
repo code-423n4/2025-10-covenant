@@ -159,6 +159,9 @@ This invariant sets the relationship between the notional value of yield tokens,
 
 $$
 \left(\frac{L}{\sqrt{P_a}} - V_{yield}\right )\left(L\sqrt{P_b} - V_{leverage}\right)=L^2
+$$
+where
+$$
 L = V_c \frac{\sqrt{P_a P_b}}{\sqrt{P_b}-\sqrt{P_a}}
 $$
 
