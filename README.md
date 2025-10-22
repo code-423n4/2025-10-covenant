@@ -48,15 +48,19 @@ The protocol does not care for small miscalculations or underaccruals of fees (t
 
 There are some edge cases for the last user leaving a market where fees can be front-run. As documented in code, this risk is out scope.
 
-### Governance Power
+### Covenant + LatentSwap Governance
 
-Once a market is created, the only thing governance can do is pause/unpause the market. The risk that governance keys are compromised and markets are paused (and held hostage) is out of scope.
+Once a market is created, the only thing governance can do is pause/unpause the market, and change mint/redeem caps. The risk that governance keys are compromised and markets are paused (and held hostage) is out of scope, or the risk that caps are removed.
 
 The risk of governances keys being compromised and potential consequences of incorrect or fraudulent governance actions is out of scope. This includes invalid actions by governance (e.g. creating a market with a non-working oracle, etc).
 
+### Curator (oracle) Governance
+
+Covenant governance can approve a curator (oracle router) and subsequently this cannot be changed for a market.  However, Curator governance can change where the router points to, potentially affecting market behaviour.  The risk of curators misconfiguring a live market is out of scope.
+
 ### Oracle Misbehaviours
 
-Oracle mispricing is currently out of scope. The oracle contracts are a direct copy of those created for Euler, specifically for Chainlink (push) + Pyth (pull). The DEX effectively prices around the oracle price, and hence DEX actions can compensate (up-to a point) for oracle mispricing or lags. However, we expect volatile assets (e.g., ETH, BTC, MON) to be priced through Pyth feeds (similar to a Perp DEX), whereas we are ok with more stable assets (e.g. USDC / USDT) being priced through Chainlink. In addition, if approved, ERC4262 prices will be used as a price source, and mispricing by a Governance approved ERC4262 is out of scope.
+Oracle misbehaviour is currently out of scope. The oracle contracts are a direct copy of those created for Euler, specifically for Chainlink (push) + Pyth (pull). The DEX effectively prices around the oracle price, and hence DEX actions can compensate (up-to a point) for oracle mispricing or lags. However, we expect volatile assets (e.g., ETH, BTC, MON) to be priced through Pyth feeds (similar to a Perp DEX), whereas we are ok with more stable assets (e.g. USDC / USDT) being priced through Chainlink. In addition, if approved, ERC4262 prices will be used as a price source, and mispricing by a Governance approved ERC4262 is out of scope.
 
 ### Large Market Size
 
