@@ -211,6 +211,6 @@ forge test --match-test submissionValidity -vvv
 
 ## Miscellaneous
 
-Employees of Covenant Finance or Solana Development Foundation and employees' family members are ineligible to participate in this audit.
+Employees of Covenant Finance and employees' family members are ineligible to participate in this audit.
 
 Code4rena's rules cannot be overridden by the contents of this README. In case of doubt, please check with C4 staff.
