@@ -1,60 +1,5 @@
 _Note: Not all issues are guaranteed to be correct._
 
-## High Severity Findings
-
-
-### Denial-of-Service via int256.min Negation Overflow in accrueInterestLnRate
-
-**Severity:** High  
-
-**Affected Contract(s):**
-- `DebtMath`
-
-**Affected Function(s):**
-- `accrueInterestLnRate()`
-
-**Description:**
-
-In the accrueInterestLnRate function of the DebtMath contract, the absolute value of a signed log rate (_lnRate) is computed by conditionally negating negative values (uint256((_lnRate >= 0) ? _lnRate : -_lnRate)). If _lnRate equals int256.min (-2^255), negating it triggers a Solidity 0.8 checked-arithmetic overflow and reverts the transaction. This edge case is not currently guarded against.
-
-**Root Cause:**
-
-The code uses unary negation on a signed int256 value without handling the special case of int256.min, which has no positive counterpart in the same bit width. When _lnRate is type(int256).min, -_lnRate overflows and reverts under Solidity 0.8+ checked arithmetic.
-
-**Impact:**
-
-An attacker or extreme market conditions could cause _lnRate to equal int256.min (e.g., via a specific lnRateBias combined with price inputs), forcing accrueInterestLnRate-and any public functions that call it (such as getAccruedDebt or previewPoolAccrual)-to revert. This results in a denial-of-service, halting interest accrual and potentially blocking critical protocol operations.
-
----
-
-
-### Arithmetic Overflow Vulnerabilities in DebtMath
-
-**Severity:** High  
-
-**Affected Contract(s):**
-- `DebtMath`
-
-**Affected Function(s):**
-- `accrueInterestLnRate()`
-- `calculateLinearAccrual()`
-
-**Description:**
-
-DebtMath contains multiple arithmetic overflow issues that either silently cap values at uint256.max or revert unexpectedly, undermining debt accounting and service continuity.
-
-**Root Cause:**
-
-The contract relies on unchecked or saturating arithmetic without bounding inputs or handling overflows appropriately. Specifically, saturatingMulDiv masks overflows by clamping to uint256.max instead of reverting or validating the intermediate result, and a direct multiplication in calculateLinearAccrual is performed without overflow checks before invocation of saturatingMulDiv.
-
-**Impact:**
-
-1. Silent inflation of debt to the maximum uint256 value when update factors become large, breaking accounting invariants and potentially causing catastrophic economic loss.
-2. Denial-of-service via revert when rate and time inputs overflow in linear accrual, blocking interest calculations and halting protocol operations.
-
----
-
-
 ## Low Severity Findings
 
 
@@ -160,6 +105,56 @@ An attacker controlling the Pyth contract or its price feed can feed arbitrary m
 
 ## QA Severity Findings
 
+### Denial-of-Service via int256.min Negation Overflow in accrueInterestLnRate
+
+**Severity:** QA  
+
+**Affected Contract(s):**
+- `DebtMath`
+
+**Affected Function(s):**
+- `accrueInterestLnRate()`
+
+**Description:**
+
+In the accrueInterestLnRate function of the DebtMath contract, the absolute value of a signed log rate (_lnRate) is computed by conditionally negating negative values (uint256((_lnRate >= 0) ? _lnRate : -_lnRate)). If _lnRate equals int256.min (-2^255), negating it triggers a Solidity 0.8 checked-arithmetic overflow and reverts the transaction. This edge case is not currently guarded against.
+
+**Root Cause:**
+
+The code uses unary negation on a signed int256 value without handling the special case of int256.min, which has no positive counterpart in the same bit width. When _lnRate is type(int256).min, -_lnRate overflows and reverts under Solidity 0.8+ checked arithmetic.
+
+**Impact:**
+
+An attacker or extreme market conditions could cause _lnRate to equal int256.min (e.g., via a specific lnRateBias combined with price inputs), forcing accrueInterestLnRate-and any public functions that call it (such as getAccruedDebt or previewPoolAccrual)-to revert. This results in a denial-of-service, halting interest accrual and potentially blocking critical protocol operations.
+
+---
+
+
+### Arithmetic Overflow Vulnerabilities in DebtMath
+
+**Severity:** QA  
+
+**Affected Contract(s):**
+- `DebtMath`
+
+**Affected Function(s):**
+- `accrueInterestLnRate()`
+- `calculateLinearAccrual()`
+
+**Description:**
+
+DebtMath contains multiple arithmetic overflow issues that either silently cap values at uint256.max or revert unexpectedly, undermining debt accounting and service continuity.
+
+**Root Cause:**
+
+The contract relies on unchecked or saturating arithmetic without bounding inputs or handling overflows appropriately. Specifically, saturatingMulDiv masks overflows by clamping to uint256.max instead of reverting or validating the intermediate result, and a direct multiplication in calculateLinearAccrual is performed without overflow checks before invocation of saturatingMulDiv.
+
+**Impact:**
+
+1. Silent inflation of debt to the maximum uint256 value when update factors become large, breaking accounting invariants and potentially causing catastrophic economic loss.
+2. Denial-of-service via revert when rate and time inputs overflow in linear accrual, blocking interest calculations and halting protocol operations.
+
+---
 
 ### Underflow in Debt Price Discount Calculation
 
