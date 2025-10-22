@@ -44,7 +44,7 @@ Admin risks (if admin is taken over, or if admin misconfigures oracles / latents
 
 ### Fee Handling
 
-The protocol does not care for small miscalculations or underaccruals of fees (that are in favour of the protocol instead of the users). Specifically, there are design choices to accrue small amounts probabilistically that could be manipulated by validators, but we chose to accept this risk. Fees that accrue for users are in scope.
+The protocol is ok with small miscalculations or underaccruals of fees (that are in favour of the protocol instead of the users). Specifically, there are design choices to accrue small amounts probabilistically that could be manipulated by validators, but we chose to accept this risk. Fees that accrue for users are in scope.
 
 There are some edge cases for the last user leaving a market where fees can be front-run. As documented in code, this risk is out scope.
 
@@ -60,7 +60,9 @@ Covenant governance can approve a curator (oracle router) and subsequently this 
 
 ### Oracle Misbehaviours
 
-Oracle misbehaviour is currently out of scope. The oracle contracts are a direct copy of those created for Euler, specifically for Chainlink (push) + Pyth (pull). The DEX effectively prices around the oracle price, and hence DEX actions can compensate (up-to a point) for oracle mispricing or lags. However, we expect volatile assets (e.g., ETH, BTC, MON) to be priced through Pyth feeds (similar to a Perp DEX), whereas we are ok with more stable assets (e.g. USDC / USDT) being priced through Chainlink. In addition, if approved, ERC4262 prices will be used as a price source, and mispricing by a Governance approved ERC4262 is out of scope.
+The Covenant protocol assumes the price from the Oracle (as governed by curators) can be trusted, and does not add additional checks. The oracle contracts themselves are a direct copy of those created for Euler, specifically for Chainlink (push) + Pyth (pull). The DEX effectively prices around the oracle price, and hence DEX actions can compensate (up-to a point) for oracle mispricing or lags. Given this, volatile assets (e.g., ETH, BTC, MON) are priced through pull feeds from Pyth, similar to a Perp DEX (Chainlink streams being implemented but not in scope for this audit), whereas more stable assets (e.g. USDC / USDT) being priced through Chainlink.  The Covenant system itself is semi-permissionless, so we do not check or stop curators from using slow oracles for volatile assets (governance risk).  These markets can be created, but users will quickly see that other markets are more liquid and have less slippage vs these markets and gravitate to those.
+
+In addition, if approved by Curator governance, ERC4262 prices will be used as a price source, and mispricing by a Governance approved ERC4262 is out of scope.
 
 ### Large Market Size
 
@@ -69,6 +71,10 @@ We expect Covenant markets to be based on token assets with reasonable FDVs and 
 ### Market Parameterization
 
 Market parameters are tested with limits upon creation, and only markets within these limits are in scope.
+
+### Irregular ERC20s
+
+Irregular ERC20s are out of scope (e.g, fee-on transfer, rebasing).  However, older ERC20s with slightly different return interfaces (e.g, bytes32 for name, no success bool for transfers) are in scope.  E.g, DAI, USDT, SNX.
 
 ### In-Code Comments
 
