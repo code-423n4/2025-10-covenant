@@ -4,7 +4,7 @@ pragma solidity ^0.8.30;
 
 import "forge-std/Test.sol";
 
-import {MarketId, MarketParams, MintParams, RedeemParams, SwapParams, LexState, TokenPrices} from "../src/lex/latentSwap/interfaces/ILatentSwapLEX.sol";
+import {MarketId, MarketParams, MintParams, RedeemParams, SwapParams, LexState, TokenPrices} from "../src/lex/latentswap/interfaces/ILatentSwapLEX.sol";
 import {LatentSwapLEX, AssetType} from "../src/lex/latentswap/LatentSwapLEX.sol";
 import {FixedPoint} from "../src/lex/latentswap/libraries/FixedPoint.sol";
 import {LSErrors} from "../src/lex/latentswap/libraries/LSErrors.sol";
@@ -20,7 +20,7 @@ import {MockOracle} from "./mocks/MockOracle.sol";
 import {MockERC20} from "./mocks/MockERC20.sol";
 import {LatentSwapLib} from "../src/periphery/libraries/LatentSwapLib.sol";
 import {AssetTypeHelpers} from "./utils/AssetTypeHelpers.sol";
-import {SaturatingMath} from "../src/lex/latentswap/libraries/saturatingMath.sol";
+import {SaturatingMath} from "../src/lex/latentswap/libraries/SaturatingMath.sol";
 
 contract LatentSwapLEXFuzzTest is Test {
     using Math for uint256;

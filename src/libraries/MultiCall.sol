@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-// OpenZeppelin Contracts (last updated v5.3.0) (utils/Multicall.sol)
+// OpenZeppelin Contracts (last updated v5.3.0) (utils/MultiCall.sol)
 
 // CovenantLabs - modified to make contract payable
 // @dev - use with caution, all calls will get same msg.value and should not be relied on

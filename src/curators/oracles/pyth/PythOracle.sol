@@ -5,7 +5,7 @@ import {IPyth} from "@pyth/IPyth.sol";
 import {PythStructs} from "@pyth/PythStructs.sol";
 import {PythOracle as EulerPythOracle, ScaleUtils, Scale} from "@euler-price-oracle/adapter/pyth/PythOracle.sol";
 import {Errors} from "../../lib/Errors.sol";
-import {SafeCast} from "@openzeppelin/contracts/utils/math/SafeCast.sol";
+import {SafeCast} from "@openzeppelin/utils/math/SafeCast.sol";
 
 /// @title PythOracle
 /// @author Covenant Labs (Expands Euler Labs interface to include feed updates and getUpdateFee)

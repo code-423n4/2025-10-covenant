@@ -4,12 +4,12 @@ pragma solidity ^0.8.30;
 import {ICovenant, MarketParams, MarketState, SynthTokens, AssetType, TokenPrices, MarketId} from "../interfaces/ICovenant.sol";
 import {IDataProvider, MarketDetails, SynthDetails, ERC20Details, LexParams} from "./interfaces/IDataProvider.sol";
 import {ITokenData} from "../lex/latentswap/interfaces/ITokenData.sol";
-import {ILatentSwapLEX} from "../lex/latentSwap/interfaces/ILatentSwapLEX.sol";
+import {ILatentSwapLEX} from "../lex/latentswap/interfaces/ILatentSwapLEX.sol";
 import {IERC4626, IERC20, IERC20Metadata} from "@openzeppelin/interfaces/IERC4626.sol";
 import {SafeCast} from "@openzeppelin/utils/math/SafeCast.sol";
 import {LatentSwapLib} from "./libraries/LatentSwapLib.sol";
-import {FixedPoint} from "../lex/latentSwap/libraries/FixedPoint.sol";
-import {LatentMath} from "../lex/latentSwap/libraries/LatentMath.sol";
+import {FixedPoint} from "../lex/latentswap/libraries/FixedPoint.sol";
+import {LatentMath} from "../lex/latentswap/libraries/LatentMath.sol";
 
 contract DataProvider is IDataProvider {
     function getMarketDetails(

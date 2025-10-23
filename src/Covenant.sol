@@ -9,7 +9,7 @@ import {Ownable2Step, Ownable} from "@openzeppelin/access/Ownable2Step.sol";
 import {NoDelegateCall} from "./libraries/NoDelegateCall.sol";
 import {ValidationLogic} from "./libraries/ValidationLogic.sol";
 import {MarketParamsLib} from "./libraries/MarketParams.sol";
-import {MulticallLib} from "./libraries/Multicall.sol";
+import {MulticallLib} from "./libraries/MultiCall.sol";
 import {Errors} from "./libraries/Errors.sol";
 import {Events} from "./libraries/Events.sol";
 

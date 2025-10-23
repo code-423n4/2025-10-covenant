@@ -2,7 +2,7 @@
 pragma solidity ^0.8.0;
 
 import {MarketId, MarketParams, MarketState, SynthTokens, TokenPrices} from "../../interfaces/ICovenant.sol";
-import {LexState, LexConfig, LexParams} from "../../lex/latentSwap/interfaces/ILatentSwapLEX.sol";
+import {LexState, LexConfig, LexParams} from "../../lex/latentswap/interfaces/ILatentSwapLEX.sol";
 
 /**
  * @title IDataProvider
