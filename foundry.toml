@@ -13,6 +13,9 @@ fs_permissions = [{ access = "read", path = "./script/"}]
 solc = '0.8.30'
 auto_detect_solc = false
 
+## Sets revert-based tests to be executed in a backward compatible manner for recent forge versions
+allow_internal_expect_revert = true
+
 [fuzz]
 runs = 10000
 max_test_rejects = 60000
