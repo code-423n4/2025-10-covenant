@@ -13,8 +13,8 @@ import {PythOracle} from "../../src/curators/oracles/pyth/PythOracle.sol";
 // Several project dependencies that might be useful in PoCs
 import {SynthToken} from "../../src/synths/SynthToken.sol";
 import {Covenant, MarketId, MarketParams, MarketState, SynthTokens} from "../../src/Covenant.sol";
-import {LatentSwapLEX} from "../../src/lex/latentSwap/LatentSwapLEX.sol";
-import {LSErrors} from "../../src/lex/latentSwap/libraries/LSErrors.sol";
+import {LatentSwapLEX} from "../../src/lex/latentswap/LatentSwapLEX.sol";
+import {LSErrors} from "../../src/lex/latentswap/libraries/LSErrors.sol";
 import {FixedPoint} from "../../src/lex/latentswap/libraries/FixedPoint.sol";
 import {DebtMath} from "../../src/lex/latentswap/libraries/DebtMath.sol";
 import {ICovenant, IERC20, AssetType, SwapParams, RedeemParams, MintParams} from "../../src/interfaces/ICovenant.sol";
@@ -34,7 +34,7 @@ import {LatentSwapLib} from "../../src/periphery/libraries/LatentSwapLib.sol";
 import {PercentageMath} from "@aave/libraries/math/PercentageMath.sol";
 import {IERC4626} from "forge-std/interfaces/IERC4626.sol";
 import {StubERC4626} from "../mocks/StubERC4626.sol";
-import {Ownable} from "@openzeppelin/contracts/access/Ownable.sol";
+import {Ownable} from "@openzeppelin/access/Ownable.sol";
 
 contract CovenantTest is Test {
     using WadRayMath for uint256;

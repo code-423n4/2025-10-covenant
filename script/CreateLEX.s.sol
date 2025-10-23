@@ -4,7 +4,7 @@ pragma solidity ^0.8.30;
 import {Script} from "forge-std/Script.sol";
 import {console} from "forge-std/console.sol";
 import {ICovenant} from "../src/interfaces/ICovenant.sol";
-import {LatentSwapLEX, ILatentSwapLEX} from "../src/lex/latentSwap/LatentSwapLEX.sol";
+import {LatentSwapLEX, ILatentSwapLEX} from "../src/lex/latentswap/LatentSwapLEX.sol";
 import {LatentSwapLib} from "../src/periphery/libraries/LatentSwapLib.sol";
 import {SafeCast} from "@openzeppelin/utils/math/SafeCast.sol";
 

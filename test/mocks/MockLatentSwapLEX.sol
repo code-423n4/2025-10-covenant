@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: BUSL-1.1
 pragma solidity ^0.8.30;
 
-import {LatentSwapLEX, MarketId, MarketParams, AssetType, LatentSwapLogic} from "../../src/lex/latentswap/LatentSwapLex.sol";
+import {LatentSwapLEX, MarketId, MarketParams, AssetType, LatentSwapLogic} from "../../src/lex/latentswap/LatentSwapLEX.sol";
 import {LatentMath} from "../../src/lex/latentswap/libraries/LatentMath.sol";
 
 /// @notice provide wrapper to expose internal functions for testing purposes

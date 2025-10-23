@@ -5,8 +5,8 @@ import "forge-std/Test.sol";
 
 import {SynthToken} from "../src/synths/SynthToken.sol";
 import {Covenant, MarketId, MarketParams, MarketState, SynthTokens, TokenPrices} from "../src/Covenant.sol";
-import {LatentSwapLEX} from "../src/lex/latentSwap/LatentSwapLEX.sol";
-import {FixedPoint} from "../src/lex/latentSwap/libraries/FixedPoint.sol";
+import {LatentSwapLEX} from "../src/lex/latentswap/LatentSwapLEX.sol";
+import {FixedPoint} from "../src/lex/latentswap/libraries/FixedPoint.sol";
 import {ICovenant, IERC20, AssetType, SwapParams, RedeemParams, MintParams} from "../src/interfaces/ICovenant.sol";
 import {ISynthToken} from "../src/interfaces/ISynthToken.sol";
 import {IPriceOracle} from "../src/interfaces/IPriceOracle.sol";
