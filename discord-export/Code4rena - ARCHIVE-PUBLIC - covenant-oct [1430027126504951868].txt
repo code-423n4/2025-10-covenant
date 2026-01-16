@@ -1,0 +1,119 @@
+==============================================================
+Guild: Code4rena
+Channel: ARCHIVE-PUBLIC / covenant-oct
+==============================================================
+
+[10/21/2025 17:22] itsmetechjay
+👋 Hello and welcome to the $43,000 in USDC **Covenant** audit channel!
+
+📆 Audit opens Wednesday, 22 October 2025 20:00 (20:00 UTC) and runs through Monday, 03 November 2025 20:00 (20:00 UTC) (12 days).
+
+**❗A coded, runnable PoC is required for all High/Medium submissions to this audit.**
+- The audit repo includes a basic PoC template to run the test suite.
+- PoCs **must** use the test suite provided in the audit repo.
+- Your submission will be marked as `Insufficient` if the POC is not runnable and working with the provided test suite.
+- Exception: PoC is optional (though recommended) for wardens with signal ≥ 0.68
+
+We'll be posting relevant links, documentation, etc. here, so if you intend to participate in this audit, consider enabling notifications for this channel. 🐺 ⏰
+
+Join the audit: https://code4rena.com/audits/2025-10-covenant
+
+{Reactions}
+c4ship (8) 
+
+[10/22/2025 20:00] itsmetechjay
+🔎 **Got audit-related questions? Here's your roadmap** 
+
+Find the information you need efficiently:
+
+1. Step 1: **Review project documentation** in the audit repo. [Join the audit](https://code4rena.com/audits/2025-10-covenant) for access.
+
+2. Step 2: Use **🤖 Docs Wolf,** C4's documentation bot assistant. Open a private thread, tag `@Docs Wolf`, and ask your question. The bot will make its best attempt to answer based on the codebase and documentation, and link you to relevant resources.  
+
+*ℹ️  Note: Docs Wolf will be available within the next 24 hours.  We'll post an update once it's ready.*
+
+3. Step 3: If you still need clarification after reviewing the docs, feel free to **ask the Covenant team** directly. From [the audit page](https://code4rena.com/audits/2025-10-covenant), join the audit and select the `Q & A` tab.
+
+To ensure sponsors can focus their time on questions that truly need their expertise, please: 
+
+- Reference what you've already checked in the docs
+- Be specific about what you need clarified
+- Use thread replies to keep discussions organized
+
+Good hunting!
+
+
+[10/22/2025 20:00] itsmetechjay
+--
+The audit repo includes a list of findings identified by [V12](https://v12.zellic.io/), [Zellic](https://zellic.io)'s in-house AI auditing tool. 
+
+[All issues found by V12](https://github.com/code-423n4/2025-10-covenant?tab=readme-ov-file#v12-findings) will be judged as out of scope and ineligible for awards.
+
+
+[10/23/2025 08:43] cloudellie
+GM @🐺Wardens - a few people reported problems compiling the code in the audit repo. We have pushed a fix that should address the issues. If you continue to experience problems, please alert staff in the #🐺・wardens channel. Thank you!
+
+{Reactions}
+👍 (19) hi5 (6) 🙏 (3) 
+
+[10/23/2025 17:05] thebrittfactor
+ℹ️ Docs Wolf is now available 🎉
+
+
+[10/23/2025 17:18] thebrittfactor
+@🐺Wardens - we have pushed a small fix to address possible testing suite failures in the Covenant repo. Please notify staff in the #🐺・wardens channel if any other issues occur. Thanks!
+
+{Reactions}
+👍 (16) 🙏 (4) ✅ 
+
+[11/03/2025 20:02] C4
+**🚨 AUDIT ALERT**
+
+@🐺Wardens The **Covenant** audit is now closed! Huge thanks to everyone who participated 🔍, whether you submitted a finding or not.
+
+What's next: The sponsor team and judge will review the findings over the next couple of weeks. Progress through the judging, awarding, and reporting phases can be tracked via [the audit page](https://code4rena.com/audits/2025-10-covenant).
+
+{Reactions}
+👍 (12) 
+
+[11/13/2025 19:57] thebrittfactor
+🤑 🎉  Awards for **Covenant**:
+
+$757.89 USDC » @Agontuk
+$505.26 USDC » @rayss
+$336.84 USDC » @K42 Ψ
+
+🏁 Findings summary
+--------------------------------------
+0 High risk findings
+0 Med risk findings
+1086 wardens participated
+
+Top QA report: Agontuk
+
+Awards will be distributed on Ethereum within the next week. Congratulations all!  💸 💸 💸
+
+{Reactions}
+c4ship (5) 🔥 (5) 👽 (4) 👀 (4) 
+
+[11/21/2025 21:15] thebrittfactor
+Cross-posting from [C4-updates](https://discord.com/channels/810916927919620096/810929015509483554/1441537133591396456): 
+
+@🐺Wardens the Covenant sponsor team is offering an [airdrop](https://x.com/covenantFi/status/1989472249200681279?s=20) to everyone who participated in their recent C4 audit. This includes everyone who joined the audit, whether you submitted a finding or not. 
+
+Airdrop details and logistics will be handled by Covenant directly, through their Discord server. To participate, head over there and follow the instructions posted in the `#c4a` channel: http://discord.covenant.finance/
+
+{Reactions}
+🔥 (14) 🐐 (7) 
+
+[01/09/2026 01:01] C4
+ℹ️ This channel is pending archive.   As a result, any private threads will be permanently deleted 01/17/2026 00:55. Please make sure to grab anything you might need before then.
+
+
+[01/15/2026 18:00] C4
+ℹ️ Reminder: this channel will be deleted after 24 hours.
+
+
+==============================================================
+Exported 11 message(s)
+==============================================================
